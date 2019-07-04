@@ -1,0 +1,43 @@
+---
+title: "Making animated plots"
+author: "Rike"
+date: "04/07/2019"
+output: html_document
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Packages
+
+We will use a few packages for this, including `ggplot2` for making plots, `gganimate` for animating them, and `gapminder` for the data. This is what we will end up with:
+
+
+![](MEP_R/project/Tutorial/YayImadeaGIF.gif)
+
+## Loading packages
+
+First we need to load the packages:
+
+```{r package load, message = FALSE}
+library(ggplot2)
+library(gganimate)
+library(gapminder)
+```
+
+## Have a quick look at the data:
+
+```{r data}
+head(gapminder)
+str(gapminder)
+```
+
+
+## Now we will start to build the plot
+
+```{r , echo=FALSE}
+ggplot(data = gapminder, aes(x = gdpPercap, y = lifeExp)) +
+  geom_point()
+```
+

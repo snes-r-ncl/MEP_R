@@ -38,7 +38,18 @@ str(gapminder)  # shows structure of dataset
 ## Now we will start to build the plot
 
 ```{r  plot}
-ggplot(data = gapminder, aes(x = gdpPercap, y = lifeExp)) +
-  geom_point()
+# save in p so you can then save the gif
+p <- ggplot(data = gapminder, aes(x = gdpPercap, y = lifeExp,  size = pop, colour = continent)) +
+  geom_point(alpha = .7) + # alpha changes transparency
+  facet_wrap(~ continent) + # make subplots by continent
+  scale_colour_brewer(palette = "Dark2") + # change to colourblind friendly colours
+  scale_size(name = "Population") + # change the name of the legend title
+  guides(colour = "none") + # remove the legend for colour
+  scale_x_log10() + 
+  labs(title = 'Year: {frame_time}', x = 'GDP per capita', y = 'Life expectancy') +
+  # add axis titles, and add the year at the top, so it displays
+  transition_time(year) # animate the plot
+p <- animate(p) # you need this extra step to save it as a gif
+anim_save("YayImadeaGIF.gif") # give it a good name and save it. Now you can tweet your gif :)
 ```
 

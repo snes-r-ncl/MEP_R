@@ -31,7 +31,7 @@ library(gapminder)
 
 ```{r data}
 head(gapminder) # shows top 6 rows
-str(gapminder)  # shows strucyure of dataset
+str(gapminder)  # shows structure of dataset
 ```
 
 

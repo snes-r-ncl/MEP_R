@@ -13,8 +13,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 We will use a few packages for this, including `ggplot2` for making plots, `gganimate` for animating them, and `gapminder` for the data. This is what we will end up with:
 
+<iframe src="https://jkrward.rstudio.cloud/f55208021f4645209a4c304d3a0d0809/file_show?path=%2Fcloud%2Fproject%2FTutorial%2FYayImadeaGIF.gif" width="750" height="500" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
-![](https://jkrward.rstudio.cloud/f55208021f4645209a4c304d3a0d0809/file_show?path=%2Fcloud%2Fproject%2FTutorial%2FYayImadeaGIF.gif)
+<!-- ![](https://jkrward.rstudio.cloud/f55208021f4645209a4c304d3a0d0809/file_show?path=%2Fcloud%2Fproject%2FTutorial%2FYayImadeaGIF.gif) -->
 
 ## Loading packages
 
